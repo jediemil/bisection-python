@@ -40,8 +40,6 @@ def newIntervals(i1, i2, depth=0):
         return newIntervals(i1, newInterval1, depth)
 
 
-
-
 numberOfGrades = int(input("Hur stort är polynomet? (Andragrad, tredjegrad..?)\n"))
 
 for i in range(0, numberOfGrades + 1):
@@ -55,9 +53,8 @@ print("\n-------------------------------------------------------\n")
 
 for interval in intervals:
     answer1, answer2 = newIntervals(interval, interval + increment)
-    answerText = "ANSWER: " + str((answer1+answer2)/2) + "  +- " + str((answer2-answer1)/2)
+    answerText = "ANSWER: " + str((answer1 + answer2) / 2) + "  +- " + str((answer2 - answer1) / 2)
     answers.append(answerText)
-
 
 for a in answers:
     print(a)
